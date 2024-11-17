@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sanswght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Неймарк – Регистрация</title>
+</head>
+<body data-barba="wrapper">
+        <div class="wrapper">
+            <header class="container">
+                <a href="index.html"><img class="logo" src="./images/logo.png"></a>
+                <div class="nav">
+                        <a href="index.html">> Главная</a>
+                        <a href="competitions.html">> Соревнования</a>
+                        <a href="monitor.html">> Монитор</a>
+                        <a href="send_solution.html">> Отправить решение</a>
+                        <a href="reg_and_login.html">> Войти</a>
+                </div>
+            </header>
+
+            <main>
+               <div class="container">
+						<div class="cart_block anim reg_background_block description_block">
+							<nav class="profile_nav reg_login_nav">
+								<a href="#" class="txt20_medium active_nav_link"> Вход </a>
+								<a href="#" class="txt20_medium">Регистрация</a>
+							</nav>
+
+							
+							<div class="login_block block active_block">
+								<p class="heading_txt txt30 anim">Войти</p>
+									<form action="handlers\autorisation.php" method="post" class="anim">
+												<p class="label">Логин:</p>
+												<input type="text" placeholder="Логин" name="login" id="login" class="area" required>
+												<p class="form_p" id="login_p"><!--Введите корректный логин--></p>
+												<p class="label">Пароль:</p>
+												<input type="password" placeholder="Пароль" name="password" id="password" class="area" required>
+												<p class="form_p" id="password_p"><!--Слишком короткий пароль--></p>
+												<div class="buttons_block">
+													<input type="submit" value="Войти" id="btn_log" class="btn_white">
+												</div>
+									</form> 
+							</div>
+
+							<div class="reg_block block ">
+								<div class="">
+									<p class="heading_txt txt30 anim wh">Зарегистрироваться</p>
+									<form action="handlers\reg.php" method="post" id="reg_form" class="anim">
+										<p class="label">Имя</p>
+										<input type="text" id="name" placeholder="Имя*" required name="name" class="area">
+										<p class="form_p" id="name_p"><!--Введите корректное имя--></p>
+										<p class="label">Фамилия</p>
+										<input type="text" id="surname" placeholder="Фамилия*" required name="surname" class="area">
+										<p class="form_p" id="surname_p"><!--Введите корректную фамилию--></p>
+										<p class="label">Логин</p>
+										<input type="text" id="login" placeholder="Логин*" required name="login" class="area">
+										<p class="form_p" id="login_p"><!--Введите корректный логин--></p>
+										<p class="label">Email</p>
+										<input type="email" id="email" placeholder="Email*" required name="email" class="area">
+										<p class="form_p" id="email_p"><!--Введите корректную почту--></p>
+										<p class="label">Пароль</p>
+										<input type="password" id="password" placeholder="Пароль*" required name="password" class="area">
+										<p class="form_p" id="password_p"><!--Слишком короткий пароль--></p>
+										<p class="label">Пароль еще раз</p>
+										<input type="password" id="password_repeat" placeholder="Повторите пароль*" required class="area">
+										<p class="form_p" id="password_repeat_p"><!--Пароли не совпадают--></p>
+										<p><input type="checkbox" id="rules" class="area"> Согласие с правилами регистрации</p>
+										<div class="buttons_block">
+											<input type="submit" value="Зарегистрироваться" id="btn_reg" class="btn_white">
+										</div>
+									</form>
+								</div>
+							</div>
+
+					</div>
+				</div>
+
+				</main>
+				<footer>
+					<div class="container">
+						 <div class="row footer_block">
+									<div class="col-10 nav_footer_left">
+										 <ul class="nav nav_footer">
+											  <a class="txt20_medium" href="#">Сотрудничество</a>
+											  <a class="txt20_medium" href="#">О нас</a>
+											  <a class="txt20_medium" href="#">Блог</a>
+										 </ul>
+									</div>
+									<div class="col-2 nav_footer_right">
+										 <a class="txt20_medium" href="#">Вход/регистрация</a>
+									</div>
+							  </ul>
+						 </div>
+					</div>
+			  </footer>
+		 </div>
+
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+	<script src="./scripts/app.js"></script>
+	<script src="./scripts/products.js"></script>
+</body>
+</html>
